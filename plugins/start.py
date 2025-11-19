@@ -6,7 +6,8 @@ from pyrogram.types import BotCommand, LinkPreviewOptions, Message
 @Client.on_message(filters.command(["start", "help"]))
 async def start(_, msg: Message):
     await msg.reply(
-        f"**直接发送链接即可**\n\n**支持的平台:**\n<blockquote expandable>{get_supported_platforms()}</blockquote>\n\n"
+        f"**直接发送链接即可**\n\n"
+        f"**支持的平台:**\n<blockquote expandable>{get_supported_platforms()}</blockquote>\n\n",
         link_preview_options=LinkPreviewOptions(is_disabled=True),
     )
 

@@ -7,7 +7,6 @@ from pyrogram.types import BotCommand, LinkPreviewOptions, Message
 async def start(_, msg: Message):
     await msg.reply(
         f"**直接发送链接即可**\n\n**支持的平台:**\n<blockquote expandable>{get_supported_platforms()}</blockquote>\n\n"
-        f"**开源地址: [GitHub](https://github.com/z-mio/parse_hub_bot)**",
         link_preview_options=LinkPreviewOptions(is_disabled=True),
     )
 

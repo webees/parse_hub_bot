@@ -562,7 +562,7 @@ class ParseResultOperate(ABC):
 
     def add_source(self, text: str):
         """添加链接"""
-        return (f"{text}\n\n<b>▎[Source]({self.result.raw_url})</b>" if self.result.raw_url else text).strip()
+        return (f"{text}\n\n<b>▎[原链接]({self.result.raw_url})</b>" if self.result.raw_url else text).strip()
 
     @staticmethod
     def f_text(text: str) -> str:
